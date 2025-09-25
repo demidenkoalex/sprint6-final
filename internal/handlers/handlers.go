@@ -16,7 +16,7 @@ func handleMain(res http.ResponseWriter, req *http.Request) {
 		http.Error(res, "method not allowed", http.StatusInternalServerError)
 		return
 	}
-	http.ServeFile(res, req, "../index.html")
+	http.ServeFile(res, req, "index.html")
 }
 
 func handleUpload(w http.ResponseWriter, r *http.Request) {
