@@ -13,7 +13,7 @@ import (
 
 func handleMain(res http.ResponseWriter, req *http.Request) {
 	if req.Method != http.MethodGet {
-		http.Error(res, "method not allowed", http.StatusMethodNotAllowed)
+		http.Error(res, "method not allowed", http.StatusInternalServerError)
 		return
 	}
 	http.ServeFile(res, req, "../index.html")
@@ -21,7 +21,7 @@ func handleMain(res http.ResponseWriter, req *http.Request) {
 
 func handleUpload(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodPost {
-		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+		http.Error(w, "method not allowed", http.StatusInternalServerError)
 		return
 	}
 
@@ -64,7 +64,7 @@ func handleUpload(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "convert error: "+err.Error(), http.StatusInternalServerError)
 		return
 	}
-	w.Header().Set("Content-Type", "text/plain; charset=utf-8")
+	w.Header().Set("Content-Type", "text/html; charset=utf-8")
 	_, _ = w.Write([]byte(convert))
 }
 
