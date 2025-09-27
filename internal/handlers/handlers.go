@@ -6,9 +6,10 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
-	"service"
 	"strings"
 	"time"
+
+	"github.com/demidenkoalex/sprint6-final/internal/service"
 )
 
 func handleMain(res http.ResponseWriter, req *http.Request) {

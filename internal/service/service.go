@@ -2,8 +2,9 @@ package service
 
 import (
 	"errors"
-	"morse"
 	"strings"
+
+	"github.com/demidenkoalex/sprint6-final/pkg/morse"
 )
 
 var (

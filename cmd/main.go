@@ -3,7 +3,8 @@ package main
 import (
 	"log"
 	"os"
-	"server"
+
+	"github.com/demidenkoalex/sprint6-final/internal/server"
 )
 
 func main() {

@@ -1,10 +1,11 @@
 package server
 
 import (
-	"handlers"
 	"log"
 	"net/http"
 	"time"
+
+	"github.com/demidenkoalex/sprint6-final/internal/handlers"
 )
 
 type Server struct {
